@@ -25,13 +25,21 @@ echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >>.config    # 在线文件管理服务
 echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >>.config # 集成 caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
 
 # 广告
+echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >>.config      # adbyby plus+
 echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >>.config   # KP 广告过滤
 echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >>.config # ADGUARD 广告拦截
 
 # 代理
-echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=y" >>.config # KUMA
+echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >>.config # KUMA
 
 # 穿透
 echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >>.config    # 内网穿透FRPC
 echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >>.config    # 内网穿透FRPS
 echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >>.config # 阿里DDNS
+echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >>.config   # zerotier ~1.3M
+
+echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >>.config
+echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >>.config
+
+echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >>.config  # MENTOHUST 锐捷认证
+echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y" >>.config # SCUT校园网客户端

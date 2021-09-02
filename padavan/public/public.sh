@@ -13,7 +13,7 @@ set -u
 # 1.修改一些默认参数 ./user/shared/defaults.h（需要不同设备不同拷贝到相应sh文件就好)
 USER_NAME="admin"                       # 用户名 admin
 USER_PASSWORD=$USER_NAME                # 用户密码 admin
-LAN_IP="192.168.3"                      # lan 地址 192.168.3.1 一定别写后面的 .1
+LAN_IP="192.168.2"                      # lan 地址 192.168.3.1 一定别写后面的 .1
 WIFI_PASSWORD="1234567890"              # wifi密码，切记密码最少8位 admin
 VERSION_TIME=$(date "+%Y%m%d")          # 自动时间更新时版本号: 20200320
 DEFAULT_PATH="./user/shared/defaults.h" # 默认文件配置目录
@@ -57,6 +57,12 @@ sed -i "/CONFIG_FIRMWARE_INCLUDE_SMARTDNs/d" .config     # 删除配置项 smart
 sed -i "/CONFIG_FIRMWARE_INCLUDE_SRELAY/d" .config       # 删除配置项 srelay 代理
 sed -i "/CONFIG_FIRMWARE_INCLUDE_WYY/d" .config          # 删除配置项 网易云解锁
 sed -i "/CONFIG_FIRMWARE_INCLUDE_WYYBIN/d" .config       # 删除配置项 网易云解锁GO版本执行文件（4M多）注意固件超大小
+sed -i "CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d" .config       # 删除配置项 zerotier ~1.3M
+sed -i "CONFIG_FIRMWARE_INCLUDE_VLMCSD/d" .config       # 删除配置项
+sed -i "CONFIG_FIRMWARE_INCLUDE_CURL/d" .config       # 删除配置项
+
+sed -i "CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d" .config       # 删除配置项 MENTOHUST 锐捷认证
+sed -i "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d" .config       # 删除配置项SCUT校园网客户端
 # 3. 添加公共自定义功能，设备单个的到设备 sh文件中添加
 ######################################################################
 # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
