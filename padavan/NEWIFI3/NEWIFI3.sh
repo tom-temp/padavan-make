@@ -12,6 +12,7 @@ set -u
 
 # 是否超频
 echo "CONFIG_FIRMWARE_CPU_900MHZ=n" >>.config
+echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >>.config
 
 # 科学
 echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >>.config # SS plus+
