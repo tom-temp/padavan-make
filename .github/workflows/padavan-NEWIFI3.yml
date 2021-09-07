@@ -39,7 +39,6 @@ jobs:
         run: |
           cd ./scripts/                                                # 进入目录
           sudo chmod +x ./*.sh                                         # 添加编译sh执行权限
-          sudo chmod -R 777 home/runner/work/padavan-make 
           OUT_DIR="./out/$(date '+%Y-%m-%d')"                          # 输出目录
           ./padavan.sh $DEVICES -s -p -l -o $OUT_DIR # 编译 DEVICES 显示详细日志 开启代理 修改登录页
           sudo chmod -R 777 home/runner/work/padavan-make 
