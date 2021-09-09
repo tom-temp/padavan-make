@@ -34,8 +34,8 @@ echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >>.config # ADGUARD 广告拦截
 echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >>.config # KUMA
 
 # 穿透
-echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >>.config    # 内网穿透FRPC
-echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >>.config    # 内网穿透FRPS
+echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >>.config    # 内网穿透FRPC
+echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >>.config    # 内网穿透FRPS
 echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >>.config # 阿里DDNS
 echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >>.config   # zerotier ~1.3M
 
