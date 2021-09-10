@@ -51,4 +51,4 @@ jobs:
         if: success() # 成功才执行
         with:
           name: Padavan-${{env.FILE_NAME}}
-          path: /home/runner/work/padavan-make/padavan-make/out
+          path: /opt/rt-n56u/trunk/images
